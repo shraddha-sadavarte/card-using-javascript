@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Card using JS</title>
+        <style>
+            .container{
+                height: 500px;
+                width: 300px;
+                border-radius: 20px;
+                background-color:  #ffbb80;
+                padding: 10px;
+                margin: 20px;
+            }
+            .container:hover{
+                cursor: pointer;
+                transition: 0.5s;
+                background-color: #ffa04d;
+                border: 3px double #ffbb80;
+                box-shadow: 0px 0px 2px 2px #ffd6b3;
+            }
+            .container-img{
+                height: 200px;
+                width: 300px;
+                display: block;
+                margin: auto;
+                border-radius: 10px;
+                border: 2px solid orange;
+            }
+            .container-text{
+                display: block;
+                margin-top: 25px;
+                text-align: center;
+            }
+            .container-js{
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+            .container-inc{
+                background-color: #80ffff;
+                border: 2px double #66ffff;
+                border-radius: 3px;
+                width: 40px;
+            }
+            .container-inc:hover{
+                cursor: pointer;
+            }
+            .container-btn{
+                padding: 5px;
+                margin-top: 30px;
+                width: 100px;
+                border-radius: 10px;
+                background-color: #80ffff;
+                margin-left: 30%;
+                border: 2px solid #66ffff;
+            }
+            .container-btn:hover{
+                cursor: pointer;
+                transition: 0.5s;
+                background-color: #66ffff;
+                border: 3px solid #80ffff;
+            }
+        </style>
+        <script>
+            let count=0;
+            function inc()
+            {
+                count++;
+                document.getElementById("number").innerHTML=count;
+            }
+            function dec()
+            {
+                count--;
+                document.getElementById("number").innerHTML=count;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <img src="./images/shivmudra ring.jfif" class="container-img">
+            <h3 class="container-text">Rajmudra Ring</h3>
+            <h4>Item Code: GR028</h4>
+            <p>Gold Gents Casting Shivmudra Ring<br>
+                Size: Free Size<br>
+                Price: $2500/-
+            </p>
+            <div class="container-js"><button onclick="inc()" class="container-inc">+</button>&nbsp;
+            <b id="number">0</b>&nbsp;
+            <button onclick="dec()" class="container-inc">-</button>&nbsp;</div>
+            <button class="container-btn">Buy Now</button>
+        </div>
+    </body>
+</html>
